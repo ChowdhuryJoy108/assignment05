@@ -105,3 +105,18 @@ document
     }
     
   });
+
+
+
+  // toggle functionality
+
+
+  document.getElementById('btn-donation').addEventListener('click', function(){
+    changeActiveButtonBackground('btn-donation');
+    showSectionById('donation-section');
+  })
+  
+  document.getElementById('btn-history').addEventListener('click', function(){
+    changeActiveButtonBackground('btn-history');
+    showSectionById('history-section');
+  })

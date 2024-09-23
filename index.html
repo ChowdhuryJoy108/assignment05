@@ -41,12 +41,17 @@
     </header>
     <main class="max-w-6xl mx-auto ">
         <div class="flex gap-6 item-center justify-center mt-[80px] mb-[32px]">
-            <button class="text-[#111111] font-bold border-2 border-gray-200 px-6 py-2 rounded-md bg-[#B4F461]">Donation</button>
-            <Button class="text-[#111111] opacity-[0.7] font-bold border-2 border-gray-200 px-6 py-2 rounded-md">History</Button>
+            <button 
+            id="btn-donation"
+            class="text-[#111111]  font-bold border-2 border-gray-200 px-6 py-2 rounded-md bg-[#B4F461]">Donation</button>
+            <Button 
+            id="btn-history"
+            class="text-[#111111]  font-bold border-2 border-gray-200 px-6 py-2 rounded-md">History</Button>
         </div>
 
-        <div>
-            <div class="card card-side bg-base-100 shadow-xl border-2 p-4 border-gray-300 rounded-xl ">
+        <section id="donation-section">
+           
+          <div class="card card-side bg-base-100 shadow-xl border-2 p-4 border-gray-300 rounded-xl ">
                 <figure class="w-[50%]">
                   <img
                     src="assets/noakhali.png" />
@@ -133,7 +138,12 @@
                   </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+
+        <section id="history-section" class="hidden">
+            <h1>This is history section</h1>
+        </section>
 
     </main>
     <footer class="bg-gray-500">
