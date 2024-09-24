@@ -14,7 +14,7 @@
 <body style="font-family:'Lexend', sans-serif;" class="">
     <header class="sticky top-0 z-50 bg-[#F9F7F3] 
     w-full">
-        <div class="w-full bg-[#F9F7F3]  navbar bg-base-100 lg:max-w-6xl mx-auto">
+        <div class="w-full bg-[#F9F7F3] navbar bg-base-100 lg:max-w-6xl mx-auto">
             <div class="navbar-start">
               <button 
               id="blog-button" 
@@ -24,7 +24,7 @@
               </button>
             </div>
 
-            <div class="hidden lg:inline-flex">
+            <div class="hidden lg:flex ml-[12%]">
               <div class="navbar-center flex items-center justify-center gap-4">
                 <img src="assets/logo.png" alt="" class="w-[48px]">
                 <span class="text-[#111111] font-semibold">Donate Bangladesh</span>
@@ -35,7 +35,7 @@
                 <div class="flex items-center space-x-2 bg-gray-200 p-2 rounded-lg lg:mb-4">
                     <img src="assets/coin.png" alt="">
                     <div class="text-[#111111] opacity-[0.7]">
-                      <span id="account-balance">10000</span> BDT
+                      <span id="account-balance">98500</span> BDT
                     </div>
                   </div>
             </div>
@@ -81,6 +81,20 @@
                     class="btn bg-[#B4F461] font-bold text-lg w-full hover:bg-[#B4F461]">
                         Donate Now
                     </button>
+                    
+                    <dialog id="my_modal_1" class="modal ">
+                      <div class="modal-box flex flex-col items-center justify-center">
+                        <h3 class="text-xl text-center font-bold lg:text-2xl">Congrates!</h3>
+                        <img  src="assets/coin.png" alt="">
+                        <p class="p-0 text-sm lg:py-4">You Have Donated for Humankind</p>
+                        <h3 class="text-xl text-center font-bold">Successfully</h3>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <button class="btn">Close Confirmation</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                   </div>
                 </div>
             </div>
@@ -110,6 +124,20 @@
                      class="btn bg-[#B4F461] font-bold text-lg  w-full hover:bg-[#B4F461]">
                         Donate Now
                     </button>
+
+                    <dialog id="my_modal_1" class="modal ">
+                      <div class="modal-box flex flex-col items-center justify-center">
+                        <h3 class="text-xl text-center font-bold lg:text-2xl">Congrates!</h3>
+                        <img  src="assets/coin.png" alt="">
+                        <p class="p-0 text-sm lg:py-4">You Have Donated for Humankind</p>
+                        <h3 class="text-xl text-center font-bold">Successfully</h3>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <button class="btn">Close Confirmation</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                   </div>
                 </div>
             </div>
@@ -140,21 +168,39 @@
                     class="btn bg-[#B4F461] font-bold text-lg w-full hover:bg-[#B4F461]">
                         Donate Now
                     </button>
+
+                    <dialog id="my_modal_1" class="modal">
+                      <div class="modal-box flex flex-col items-center justify-center">
+                        <h3 class="text-xl text-center font-bold lg:text-2xl">Congrates!</h3>
+                        <img  src="assets/coin.png" alt="">
+                        <p class="p-0 text-sm lg:py-4">You Have Donated for Humankind</p>
+                        <h3 class="text-xl text-center font-bold">Successfully</h3>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <button class="btn">Close Confirmation</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                   </div>
                 </div>
             </div>
 
         </section>
 
-        <section id="history-section" class="hidden mb-[800px]">
+        <section id="history-section" class="hidden mb-[100px]">
             <div id="donation-history" class="p-4">
 
             </div>
         </section>
 
     </main>
-    <footer class="bg-gray-500">
-        this is footer
+
+
+
+    <footer class="fixed bottom-0 z-50 text-center bg-[#F9F7F3] 
+    w-full p-2">
+        <p class="text-xs">all right reserved 2024 &#64; Joy Chowdhury</p>
     </footer>
 
     <!-- js files here  -->

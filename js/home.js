@@ -19,27 +19,26 @@ document
       "input-money-for-noakhali"
     );
 
-    if(!isNaN(donatingAmountForNoakhali)){
+    if (!isNaN(donatingAmountForNoakhali) && donatingAmountForNoakhali !== '') {
       const donationAmount = parseFloat(donatingAmountForNoakhali);
-   
-    if (donationAmount > balance ) {
-      alert("You have insufficient balance");
+
+      if (donationAmount > balance) {
+        alert("You have insufficient balance");
+      } else {
+        const updatedBalance = balance - donationAmount;
+        document.getElementById("account-balance").innerText = updatedBalance;
+        const raisedDonationForNoakhali =
+          noakhaliTotalDonation + donationAmount;
+        document.getElementById("noakhali-total-donation-amount").innerText =
+          raisedDonationForNoakhali;
+        showDonationHistory("donation-history", donationAmount, "noakhali");
+        // alert("successfully added");
+        document.getElementById("my_modal_1").showModal();
+      }
     } else {
-      const updatedBalance = balance - donationAmount;
-      document.getElementById("account-balance").innerText = updatedBalance;
-      const raisedDonationForNoakhali = noakhaliTotalDonation + donationAmount;
-      document.getElementById("noakhali-total-donation-amount").innerText =
-        raisedDonationForNoakhali;
-      showDonationHistory('donation-history', donationAmount, 'noakhali');
-      alert("successfully added");
+      alert("Invalid Input");
     }
-    }else{
-      alert('invalid input')
-    }
-    
   });
-
-
 
 document
   .getElementById("donate-for-feni")
@@ -56,7 +55,7 @@ document
       "input-money-for-feni"
     );
 
-    if(!isNaN(donatingAmountForFeni)){
+    if (!isNaN(donatingAmountForFeni) && donatingAmountForFeni !== '') {
       const donationAmount = parseFloat(donatingAmountForFeni);
 
       if (donationAmount > balance) {
@@ -67,13 +66,13 @@ document
         const raisedDonationForFeni = feniTotalDonation + donationAmount;
         document.getElementById("feni-total-donation-amount").innerText =
           raisedDonationForFeni;
-          showDonationHistory('donation-history', donationAmount, 'feni');
-        alert("successfully added");
+        showDonationHistory("donation-history", donationAmount, "feni");
+        document.getElementById("my_modal_1").showModal();
+        // alert("successfully added");
       }
-    }else{
-      alert('invalid input')
+    } else {
+      alert("Invalid Input");
     }
-   
   });
 
 document
@@ -91,39 +90,37 @@ document
       "input-money-for-quota"
     );
 
-    if(!isNaN(donatingAmountForQuota)){
+    if (!isNaN(donatingAmountForQuota) && donatingAmountForQuota !== '') {
+      //do a shared function
       const donationAmount = parseFloat(donatingAmountForQuota);
 
-    if (donationAmount > balance) {
-      alert("You have insufficient balance");
-    } else {
-      const updatedBalance = balance - donationAmount;
-      document.getElementById("account-balance").innerText = updatedBalance;
-      const raisedDonationForQuota = quotaTotalDonation + donationAmount;
-      document.getElementById("quota-total-donation-amount").innerText =
-        raisedDonationForQuota;
-  
-        showDonationHistory('donation-history', donationAmount, 'quota');
+      if (donationAmount > balance) {
+        alert("You have insufficient balance");
+      } else {
+        const updatedBalance = balance - donationAmount;
+        document.getElementById("account-balance").innerText = updatedBalance;
+        const raisedDonationForQuota = quotaTotalDonation + donationAmount;
+        document.getElementById("quota-total-donation-amount").innerText =
+          raisedDonationForQuota;
 
-      alert("successfully added");
+        showDonationHistory("donation-history", donationAmount, "quota");
+
+        document.getElementById("my_modal_1").showModal();
+        // alert("successfully added");
+      }
+    } else {
+      alert("Invalid Input");
     }
-    }else{
-      alert('invalid input')
-    }
-    
   });
 
+// toggle functionality
 
+document.getElementById("btn-donation").addEventListener("click", function () {
+  changeActiveButtonBackground("btn-donation");
+  showSectionById("donation-section");
+});
 
-  // toggle functionality
-
-
-  document.getElementById('btn-donation').addEventListener('click', function(){
-    changeActiveButtonBackground('btn-donation');
-    showSectionById('donation-section');
-  })
-  
-  document.getElementById('btn-history').addEventListener('click', function(){
-    changeActiveButtonBackground('btn-history');
-    showSectionById('history-section');
-  })
+document.getElementById("btn-history").addEventListener("click", function () {
+  changeActiveButtonBackground("btn-history");
+  showSectionById("history-section");
+});

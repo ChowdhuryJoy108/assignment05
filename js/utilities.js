@@ -22,7 +22,7 @@ function changeActiveButtonBackground(id){
     document.getElementById('btn-donation').style.background = '#FFFFFF';
     document.getElementById('btn-history').style.background = '#FFFFFF';
     document.getElementById(id).style.background = '#B4F461';
-    document.getElementById(id).style.color = '#111111';
+    
 }
 
 
