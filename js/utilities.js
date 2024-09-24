@@ -21,3 +21,24 @@ function changeActiveButtonBackground(id){
     document.getElementById(id).style.color = '#111111';
 
 }
+
+function generateMsg(msg){
+    if(msg === 'noakhali'){
+        return `Taka is Donated for famine-2024 at Noakhali, Bangladesh`
+    }else if(msg === 'feni'){
+        return `Taka is Donated for famine-2024 at Feni, Bangladesh`
+    }else{
+        return `Taka is Donated for famine-2024 at Quota protest, Bangladesh`
+    }
+}
+
+function showDonationHistory(id, amount,text){
+    const historySection = document.getElementById(id);
+    const historyDiv = document.createElement('div');
+    historyDiv.innerHTML =  `
+        <h1 class="text-xl font-extrabold text-[#111111]">${amount} ${generateMsg(text)} </h1>
+        <p>${Date()}</p>
+    `
+    historySection.appendChild(historyDiv)
+
+}

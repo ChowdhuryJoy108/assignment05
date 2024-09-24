@@ -30,6 +30,7 @@ document
       const raisedDonationForNoakhali = noakhaliTotalDonation + donationAmount;
       document.getElementById("noakhali-total-donation-amount").innerText =
         raisedDonationForNoakhali;
+      showDonationHistory('donation-history', donationAmount, 'noakhali');
       alert("successfully added");
     }
     }else{
@@ -37,6 +38,8 @@ document
     }
     
   });
+
+
 
 document
   .getElementById("donate-for-feni")
@@ -64,6 +67,7 @@ document
         const raisedDonationForFeni = feniTotalDonation + donationAmount;
         document.getElementById("feni-total-donation-amount").innerText =
           raisedDonationForFeni;
+          showDonationHistory('donation-history', donationAmount, 'feni');
         alert("successfully added");
       }
     }else{
@@ -98,6 +102,9 @@ document
       const raisedDonationForQuota = quotaTotalDonation + donationAmount;
       document.getElementById("quota-total-donation-amount").innerText =
         raisedDonationForQuota;
+  
+        showDonationHistory('donation-history', donationAmount, 'quota');
+
       alert("successfully added");
     }
     }else{
