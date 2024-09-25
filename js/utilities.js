@@ -8,6 +8,7 @@ function getInputFieldValueById (id){
 
 
 
+
 function showSectionById(id){
     document.getElementById('donation-section').classList.add('hidden');
     document.getElementById('history-section').classList.add('hidden');
@@ -15,6 +16,7 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
 
 }
+
 
 
 
@@ -27,6 +29,7 @@ function changeActiveButtonBackground(id){
 
 
 
+
 function generateMsg(msg){
     if(msg === 'noakhali'){
         return `Taka is Donated for Flood at Noakhali, Bangladesh`
@@ -36,6 +39,7 @@ function generateMsg(msg){
         return `Taka is Donated for Aid for Injured in the Quota Movement,Bangladesh`
     }
 }
+
 
 
 
@@ -54,3 +58,4 @@ function showDonationHistory(id, amount,text){
     historySection.appendChild(historyDiv);
 
 }
+

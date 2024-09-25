@@ -36,9 +36,11 @@ document
         document.getElementById("my_modal_1").showModal();
       }
     } else {
-      alert("Invalid Amount Input");
+      alert("Invalid Amount Input!");
     }
   });
+
+
 
 document
   .getElementById("donate-for-feni")
@@ -71,9 +73,11 @@ document
         
       }
     } else {
-      alert("Invalid Amount Input");
+      alert("Invalid Amount Input!");
     }
   });
+
+
 
 document
   .getElementById("donate-for-quota-protest")
@@ -91,7 +95,7 @@ document
     );
 
     if (!isNaN(donatingAmountForQuota) && donatingAmountForQuota !== '' && donatingAmountForQuota > 0) {
-      //do a shared function
+     
       const donationAmount = parseFloat(donatingAmountForQuota);
 
       if (donationAmount > balance) {
@@ -108,9 +112,10 @@ document
         document.getElementById("my_modal_1").showModal();
       }
     } else {
-      alert("Invalid Amount Input");
+      alert("Invalid Amount Input!");
     }
   });
+
 
 
 
@@ -118,6 +123,7 @@ document.getElementById("btn-donation").addEventListener("click", function () {
   changeActiveButtonBackground("btn-donation");
   showSectionById("donation-section");
 });
+
 
 document.getElementById("btn-history").addEventListener("click", function () {
   changeActiveButtonBackground("btn-history");
