@@ -8,13 +8,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <header class="sticky top-0 z-50 bg-[#F9F7F3] 
+    w-full ">
+        <div class="w-full bg-[#F9F7F3] navbar bg-base-100 lg:max-w-6xl mx-auto">
+            <div class="navbar-start">
+              <button 
+              id="home-button" 
+              class="bg-[#B4F461] font-semibold px-6
+              py-2 rounded-md">
+                Home
+              </button>
+            </div>
+
+            <div class="hidden lg:flex ml-[12%]">
+              <div class="navbar-center flex items-center justify-center gap-4">
+                <img src="assets/logo.png" alt="" class="w-[48px]">
+                <span class="text-[#111111] font-semibold">Donate Bangladesh</span>
+              </div>
+            </div>
+
+            <div class="w-full navbar-end">
+                <div class="flex items-center space-x-2 bg-gray-200 p-2 rounded-lg lg:mb-4">
+                    <img src="assets/coin.png" alt="">
+                    <div class="text-[#111111] opacity-[0.7]">
+                      <span id="account-balance">98500</span> BDT
+                    </div>
+                  </div>
+            </div>
+          </div>
+    </header> 
     <main class="mt-[100px]">
 
-        <section>
-            
+        <section class="w-full  px-2 flex flex-col items-center justify-center gap-8 mb-[30px] lg:max-w-6xl mx-auto ">
+            <div class="flex flex-col gap-2 mx-2 lg:flex-row">
+              <span class="px-2 bg-blue-300  py-2 rounded-lg text-center font-bold ">Web Development</span>
+              <span class="bg-blue-300 px-4 py-2 rounded-lg text-center font-bold">FrontEnd Development</span>
+            </div>
+
+            <div class="mx-2">
+              <h1 class="text-2xl p-4 font-extrabold leading-normal text-center lg:text-4xl">FAQ on Manipulating the Document Object Model in JavaScript</h1>
+            <p class="w-full px-2 text-center text-lg lg:px-8">DOM manipulation is crucial for several reasons: <span class="font-bold text-lg ">
+              Dynamic User Experience, Content Updates, Responsive Design, Data Display, Animation and Effects, Form Validation, Event Handling.
+            </span></p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                
+              </div>
+              <div class="flex flex-col p-2 gap-2">
+                <p class="mb-0 font-bold">By JOY CHOWDHURY</p>
+                <span class="mb-0 text-lime-700">2 min. Read</span>
+              </div>
+            </div>
         </section>
         <section class="flex flex-col gap-4 p-4 mx-2 w-full lg:ml-[8%] max-w-6xl mx-auto">
-          <div class="border-2 border-slate-100  flex  items-center justify-center shadow-lg  max-w-3xl mx-auto p-4 ">
+          <div class="border-2 border-slate-100 mb-[30px] flex  items-center justify-center shadow-lg  max-w-3xl mx-auto p-4 ">
             <img class="w-fit lg:w-2/3" src="assets/Image-1-4.png" alt="">
           </div>
         </section>
@@ -30,7 +82,7 @@
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>The <span class="font-bold text-blue-400">getElementById()</span> method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200 mb-4">
@@ -38,18 +90,19 @@
                 <div class="collapse-title text-xl font-medium"> What is event delegation in the context of the DOM, and why is it useful?
                 </div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200 mb-4">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>To manipulate an element's attributes and styles using the DOM, you can use methods like <span class="font-bold text-blue-400">getAttribute()</span>, <span class="font-bold text-blue-400">setAttribute()</span>, and <span class="font-bold text-blue-400">removeAttribute()</span> for attributes. For styles, you can access the style property directly, allowing you to change CSS properties, like <span class="font-bold text-blue-400">element.style.color = 'red';</span>. To delve deeper, you can also use classList methods to add, remove, or toggle classes for ultimate styling flexibility.</p>
                 </div>
               </div>
         </section>
     </main>
     
+    <script src="js/blog.js"></script>
 </body>
 </html>
