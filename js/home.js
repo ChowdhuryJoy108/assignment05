@@ -19,11 +19,11 @@ document
       "input-money-for-noakhali"
     );
 
-    if (!isNaN(donatingAmountForNoakhali) && donatingAmountForNoakhali !== '') {
+    if (!isNaN(donatingAmountForNoakhali) && donatingAmountForNoakhali !== '' && donatingAmountForNoakhali > 0) {
       const donationAmount = parseFloat(donatingAmountForNoakhali);
 
       if (donationAmount > balance) {
-        alert("You have insufficient balance");
+        alert("Sorry! Your Balance is Insufficient.");
       } else {
         const updatedBalance = balance - donationAmount;
         document.getElementById("account-balance").innerText = updatedBalance;
@@ -32,11 +32,11 @@ document
         document.getElementById("noakhali-total-donation-amount").innerText =
           raisedDonationForNoakhali;
         showDonationHistory("donation-history", donationAmount, "noakhali");
-        // alert("successfully added");
+       
         document.getElementById("my_modal_1").showModal();
       }
     } else {
-      alert("Invalid Input");
+      alert("Invalid Amount Input");
     }
   });
 
@@ -55,11 +55,11 @@ document
       "input-money-for-feni"
     );
 
-    if (!isNaN(donatingAmountForFeni) && donatingAmountForFeni !== '') {
+    if (!isNaN(donatingAmountForFeni) && donatingAmountForFeni !== '' && donatingAmountForFeni > 0) {
       const donationAmount = parseFloat(donatingAmountForFeni);
 
       if (donationAmount > balance) {
-        alert("You have insufficient balance");
+        alert("Sorry! Your Balance is Insufficient.");
       } else {
         const updatedBalance = balance - donationAmount;
         document.getElementById("account-balance").innerText = updatedBalance;
@@ -68,10 +68,10 @@ document
           raisedDonationForFeni;
         showDonationHistory("donation-history", donationAmount, "feni");
         document.getElementById("my_modal_1").showModal();
-        // alert("successfully added");
+        
       }
     } else {
-      alert("Invalid Input");
+      alert("Invalid Amount Input");
     }
   });
 
@@ -90,12 +90,12 @@ document
       "input-money-for-quota"
     );
 
-    if (!isNaN(donatingAmountForQuota) && donatingAmountForQuota !== '') {
+    if (!isNaN(donatingAmountForQuota) && donatingAmountForQuota !== '' && donatingAmountForQuota > 0) {
       //do a shared function
       const donationAmount = parseFloat(donatingAmountForQuota);
 
       if (donationAmount > balance) {
-        alert("You have insufficient balance");
+        alert("Sorry! Your Balance is Insufficient.");
       } else {
         const updatedBalance = balance - donationAmount;
         document.getElementById("account-balance").innerText = updatedBalance;
@@ -106,14 +106,13 @@ document
         showDonationHistory("donation-history", donationAmount, "quota");
 
         document.getElementById("my_modal_1").showModal();
-        // alert("successfully added");
       }
     } else {
-      alert("Invalid Input");
+      alert("Invalid Amount Input");
     }
   });
 
-// toggle functionality
+
 
 document.getElementById("btn-donation").addEventListener("click", function () {
   changeActiveButtonBackground("btn-donation");
